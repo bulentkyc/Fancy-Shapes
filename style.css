@@ -1,0 +1,64 @@
+body {
+    background: #000;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card1::before, .card2::before {
+    background-color: cornflowerblue;
+    width: 170px;
+    height: 10px;
+    border-left: 30px solid coral;
+    content: '';
+    display: block;
+}
+
+.card1::after {
+    content: url('https://picsum.photos/200/200');
+}
+
+.card2::after {
+    background-color: cornflowerblue;
+    width: 170px;
+    height: 10px;
+    border-right: 30px solid coral;
+    content: '';
+    display: block;
+}
+
+.card1, .card2 {
+    margin: 20px;;
+}
+
+.white-bg {
+    background:white;
+}
+
+.container1 > img {
+    
+    clip-path: inset(8px 16px 16px 16px round 10px);
+}
+
+.container2 > img {
+    clip-path: circle(30px at 100px 70px);
+}
+
+.container3 > img {
+    clip-path: ellipse(80px 50px at 100px 70px);
+}
+
+.container4 > img {
+    clip-path: polygon(50% 0, 100% 100%, 0 100%, 0 50%, 25% 50%, 25% 0);
+}
+
+.container5 > img {
+    clip-path: polygon(50% 0, 87.5% 12.5%, 100% 50%, 87.5% 87.5%, 50% 100%, 12.5% 87.5%, 0 50%, 12.5% 12.5%);
+}
+
+.container6 > img {
+    clip-path: path('M15,45 A30,30,0,0,1,75,45 A30,30,0,0,1,135,45 Q135,90,75,130 Q15,90,15,45 Z');
+}
